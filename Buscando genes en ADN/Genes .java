@@ -1,11 +1,6 @@
 import edu.duke.*;
 import java.io.File;
-/**
- * Write a description of class Part1 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Part1 {
     public int findStopCodon(String dna, int startIndex, String stopCodon){
        int currentPos= dna.indexOf(stopCodon,startIndex+3);
