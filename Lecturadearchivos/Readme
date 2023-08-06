@@ -1,0 +1,5 @@
+En este se muestra el manejo de archivos de CSV, el programa cuenta con algunos metodos como:
+  -countryInfo: Lo cual permite buscar y muestra la informaciòn de un país.
+  -listExportersTwoProducts: Que paises exportan 2 productos en especifico.
+  -numberOfExporters: Cuantas empresas exportan un determinado producto.
+  -bigExporters:Que países exportan por arriba de determinada cantidad.
