@@ -1,0 +1,1 @@
+Este proyecto te permite selecionar una gran variedad de imagenes para posteriormente aplicarles un filtro de escala de grises o un inversor de imagen. Ademas de guardarlos en la misma carpteta con el nombre con el prefijo de gray- o inversor los metodos para utilizarlo son los que tienen por nombre batch.
