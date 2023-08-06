@@ -1,12 +1,8 @@
-/**
- * Reads a chosen CSV file of our preferences and prints each field.
- * 
- * @author Duke Software Team
- */
+
 import edu.duke.*;
 import org.apache.commons.csv.*;
 
-public class FirstCSVExample {
+public class Exporters {
     public void readFood() {
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();
@@ -25,6 +21,7 @@ public class FirstCSVExample {
         return "Not found";
     }
     public void listExportersTwoProducts(CSVParser parser, String exportItem1, String exportItem2){
+        System.out.println("Países que exportan "+ exportItem1+ " y "+exportItem2);
         for(CSVRecord record : parser){
             String p=record.get("Exports");
             if(p.contains(exportItem1) && p.contains(exportItem2)){
@@ -42,7 +39,7 @@ public class FirstCSVExample {
         }
         return count;
     }
-    public void bigExporters(CSVParser parser, String amount){
+    public void bigExporters(CSVParser parser, String amount){ //No tienen un funcionamiento preciso debido a que solo cuenta el numero de strings que se ingresan
         for(CSVRecord record : parser){
             
             if(record.get("Value (dollars)").length()>amount.length()){
@@ -55,11 +52,11 @@ public class FirstCSVExample {
        CSVParser parser = fr.getCSVParser();
        System.out.println(countryInfo(parser,"Nauru"));
        parser = fr.getCSVParser();
-       System.out.println("Cotoon and flowers");
+       
        listExportersTwoProducts(parser,"cotton","flowers");
        parser = fr.getCSVParser();
        System.out.println("2 Cocoa");
-       System.out.println(numberOfExporters(parser,"cocoa"));
+       System.out.println("Numero de empresas exportadoras"+numberOfExporters(parser,"cocoa"));
        parser = fr.getCSVParser();
        System.out.print("$10000000");
        bigExporters(parser,"$400,000,000,000");
